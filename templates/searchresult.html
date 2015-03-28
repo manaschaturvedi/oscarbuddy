@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Web Mining</title>
+	<style>
+		#amazon
+		{
+			float:left;
+			border: 2px solid red;
+			width:630px;
+		}
+		
+		#rediff
+		{
+			border: 2px solid black;
+		}
+
+	</style>
+</head>
+<body>
+<div id = "amazon">
+<i>Amazon.com returned the following list of books for the '{{keey}}' keyword:</i><br><br>
+
+{% block content %}
+{% for e in li %}
+		<h4>{{e}}</h4>
+<hr>		
+{% endfor %}	
+</div>	
+
+<div id = "rediff">
+<i>Rediff.com returned the following list of books for the '{{keey}}' keyword:</i><br><br>
+
+{% for e in ai %}
+		<h4>{{e}}</h4>
+<hr>		
+{% endfor %}	
+{% endblock %}
+</div>	
+
+</body>
+</html>	

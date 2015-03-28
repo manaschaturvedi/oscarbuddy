@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+<link type="text/css" rel="stylesheet" href="/stylesheets/template.css"/>
+<style type="text/css">
+.error {
+	color: red
+}
+</style>
+</head>
+
+<body>
+  <br/>
+  <div id="book-image"> <img src="/images/{{disp.prod_id}}" width=100% height=38%> </div>
+  <div id="book-details">
+    <h3><p class="error">{{error_user}}</p></h3>
+    <u><h3 id="bk_title">{{disp.name}}</h3></u>
+    <br>
+    <table border=0 cellpadding="4" cellspacing="6">
+      <tr>
+        <td>Author </td>
+        <td>:{{disp.author}}</td>
+      </tr>
+      <tr>
+        <td>Publisher </td>
+        <td>:{{disp.publisher}}</td>
+      </tr>
+      <tr>
+        <td>Publication Year </td>
+        <td>:{{disp.publishing_date}}</td>
+      </tr>
+      <tr>
+        <td>Edition </td>
+        <td>:{{disp.edition}}</td>
+      </tr>
+      <tr>
+        <td>Original Price Rs: </td>
+        <td>:{{disp.actual_price}}</td>
+      </tr>
+      <tr>
+        <td>OB Price Rs</td>
+        <td>:{{disp.discount_price}}</td>
+      </tr>
+    </table>
+    </br>
+    <form method = "post">
+        <div id = "quantity">
+        Quantity:<input type = "text" name = "quantity">
+        <p class="error">{{error_quantity}}</p>
+        </div>
+            </br>
+        <input type="submit" id="buy" value="BUY">
+    </form>
+  </div>
+  <div id="tp"> <img src="/images/temp.jpg"> </div>
+  <br>
+  <div id="off"> <img src="/images/20.png" width=100% height=20% > </div>
+      </br></br></br></br> </br></br></br></br>
+</body>
+
+{% endblock %}

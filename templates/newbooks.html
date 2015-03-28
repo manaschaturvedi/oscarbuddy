@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+<link type="text/css" rel="stylesheet" href="/stylesheets/new.css"/>
+</head>
+
+<body>
+  <div id="left">
+    <form method = "post">
+      <p>Department </p>
+      <select name = "branch" id="size1">
+        <option></option>
+        <option>CMPN</option>
+        <option>EXTC</option>
+        <option>ETRX</option>
+        <option>IT</option>
+        <option>MECH</option>
+      </select>
+      <br>
+      <br>
+      <p>Semester </p>
+      <select name = "semester" id="size2">
+        <option></option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+      </select>
+      <br>
+      <br>
+      <p>Publications </p>
+      <select name = "publications" id="size3">
+        <option></option>
+        <option>Techmax</option>
+        <option>Nandu</option>
+        <option>Pearson</option>
+        <option>Tata McGraw Hill</option>
+        <option>Technical</option>
+      </select>
+      <br>
+      <br>
+      <p>Subject </p>
+      <select name = "subject" id="size4">
+        <option></option>
+        <option>System Programming and Compiler Construction</option>
+        <option>Advanced Microprocessors</option>
+        <option>Microprocessors and Interfacing</option>
+        <option>Computer Networks</option>
+        <option>Data Warehouse and Data Mining</option>
+      </select>
+      <br>
+      <br>
+      <input type = "submit" value="Filter">
+    </form>
+  </div>
+  <br>
+  <br>
+  <div id="right"> {%for d in disp%}
+    <div id = "filtered">
+      <h2> {{d.name}} </h2>
+      <br>
+      <img src = "/images/{{d.prod_id}}" width = 200 height = 200/> <a href = "/template?key={{d.prod_id}}">BUY NOW</a> <br>
+    </div>
+    <hr>
+    {%endfor%} <br>
+  <br><br><br><br><br><br><br>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br>
+</body>
+
+{% endblock %}

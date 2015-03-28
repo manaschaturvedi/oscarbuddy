@@ -1,0 +1,45 @@
+  {% extends "base.html" %}
+  {% block content %}
+  
+  <head>
+  <link type="text/css" rel="stylesheet" href="/stylesheets/cart.css"/>
+  <style type="text/css">
+.error {
+	color: red
+}
+</style>
+  </head>
+  
+  <body>
+  </br>
+  <h3><p class="error">{{error_user}}</p></h3>
+  <div id="cart-outline">
+  <h2>Shopping Summary</h2><br>
+    <form method="post">
+    <table class="table" cellpadding="5" cellspacing="0" border="1">
+          <tr>
+              <th>Product Name</th>
+              <th>Price of product</th>
+              <th>Qty</th>
+              <th>Delivery Details</th>
+              <th>Sub Total</th>
+           </tr>
+           <tr>
+              <input type = "hidden" name = "book_id" value = "{{disp.prod_id}}">
+              <td><input type = "hidden" name = "book_name" value = "{{disp.name}}">{{disp.name}}<br><img src="/images/{{disp.prod_id}}" width="115" height="130" alt="" /></td>
+              <td><input type = "hidden" name = "discount_price" value = {{disp.discount_price}}>{{disp.discount_price}}</td>
+              <td><input type = "hidden" name = "quantity" value = {{quantity}}>{{quantity}}</td>
+              <td>2-3 working days.</td>
+              <td><input type = "hidden" name = "tot_amount" value = {{disp.discount_price * quantity}}>{{disp.discount_price * quantity}}</td>
+           </tr>
+     </table>    
+  </div>
+ 	 <div id="buttons">
+   		 <a href="/newbooks" class="myButton">Continue Shopping</a>
+   		 <input type="submit" value="Checkout -->" class="myButton"/>
+  	 </div>
+    </form> 
+  <br><br>
+  </body>
+  
+  {% endblock %}

@@ -1,0 +1,59 @@
+#book-image {
+	border: 1px solid black;
+	width:16%;
+	margin-top: 3%;
+	margin-left:4%;
+	position:relative;
+}
+#book-details {
+	padding: 1% 1% 1% 1%;
+	margin-top:-22%;
+	margin-left:25%;
+	position:absolute;
+	//border:2px solid black;
+	width: 40%;
+	height: auto;
+}
+#bk_title{
+	font-family:Trebuchet MS;
+
+}
+#tp{
+	width:20%;
+	float:right;
+	margin-right:8%;
+	margin-top:-20%;
+	//border: 1px solid black;
+}
+#off{
+	width:10%;
+	//float:left;
+	position:relative;
+	margin-left:50%;
+	margin-top:-5%;
+	//border: 1px solid black;
+	}   
+#buy {
+	width: 20%;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	float:left;	
+	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	//color:#333;
+	color:black;
+	background-color:#FA2;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border: 1px solid black;
+	font-family:'Helvetica Neue',Arial,sans-serif;
+	font-size:16px;
+	font-weight:700;
+	height:32px;
+	padding:4px 16px;
+	text-shadow:#FE6 0 1px 0
+}

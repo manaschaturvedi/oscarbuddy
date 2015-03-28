@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+#steps {
+//border:1px solid black;
+	margin-top:2%;
+	width:100%;
+}
+.flex-direction-nav, .flex-control-nav {
+	display: none;
+	border:1px solid black;
+}
+.flexslider-one img {
+	display: block;
+	margin: 0 auto;
+	border:1px solid black;
+}

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+<link type="text/css" rel="stylesheet" href="/stylesheets/order1.css"/>
+<style type="text/css">
+.error {
+	color: red
+}
+</style>
+</head>
+
+<body>
+  <div class="box">
+    <div id="sc">
+      <h2>Order Form</h2></br>
+      <h3><p class="error">{{error_user}}</p></h3>
+      <p class="error">{{error_form}}</p>
+    </div>
+    
+    <div id="list">
+      <form method = "post">
+        <h4>Customer Name:</h4>
+        <br>
+        <input type="text" name="cusname" placeholder=" Enter your name " size="50">
+        <br>
+        <br>
+        <h4>Address:</h4>
+        <br>
+        <input type="text" name="address" placeholder=" Enter your address " size="90">
+        <br>
+        <br>
+        <h4>Email Id:</h4>
+        <br>
+        <input type="text" name="email" placeholder=" Enter your Email ID " size="90">
+        <br>
+        <br>
+        <h4>College:</h4>
+        <br>
+        <select name="college">
+          <option value="Null">None Selected</option>
+          <option value="Atharva">Atharva College of Engineering (ACE), Malad, Mumbai</option>
+          <option value="DonBosco">Don Bosco Institute of Technology (DBIT), Kurla, Mumbai</option>
+          <option value="D.J"> Dwarkadas J. Sanghvi (DJ Sanghvi) College of Engineering, Juhu, Mumbai</option>
+          <option value="Fr CRCE">Fr. Agnel College of Engineering (Fr CRCE), Bandra, Mumbai</option>
+          <option value="KJ-V">KJ Somaiya College of Engineering (KJSCE), Vidyavihar, Mumbai</option>
+          <option value="KJ-S"> KJ Somaiya Institute of Engineering and Information Technology, Sion</option>
+          <option value="RGIT">Rajiv Gandhi Institute of Technology (RGIT), Versova, Mumbai</option>
+          <option value="SPIT">Sardar Patel Institute of Technology (SPIT), Andheri, Mumbai</option>
+          <option value="SAKEC">Shah and Anchor Kutchhi Engineering College (SAKEC), Chembur, Mumbai</option>
+          <option value="SFIT">St Francis Institute of Technology (SFIT), Borivali, Mumbai</option>
+          <option value="TSEC">Thadomal Shahani Engineering College (TSEC), Bandra, Mumbai</option>
+          <option value="TCET">Thakur College of Engineering and Technology (TCET), Kandivali, Mumbai</option>
+          <option value="XIE">Xavier Institute of Engineering, Mahim, Mumbai</option>
+        </select>
+        <input type = "hidden" name = "book_id" value = "{{disp.prod_id}}">
+        <br>
+        <br>
+        <h4>Books Selected:</h4>
+        <img src = "/images/{{disp.prod_id}}" width = 200 height = 200/><br>
+        <br>
+        <br>
+        <input type = "hidden" name = "book_name" value = "{{disp.name}}">{{disp.name}}
+        <br><br>
+        <h4>Quantity:</h4>
+            <input type = "hidden" name = "quant" value = {{quantity}}>{{quantity}}
+        <br><br>
+        <h4>Total amount:</h4>
+            <input type = "hidden" name = "tot_amount" value = {{disp.discount_price * quantity}}>{{disp.discount_price * quantity}}
+        <h5>(Cash on delivery only!)</h5>
+        <br><br>
+        <h4>Contact Details: </h4>
+        <ul>
+          <li>Mobile: +91-
+            <input type="tel" name="mobile">
+          </li>
+          <br>
+        </ul>
+        <br>
+        <br>
+        <input type="reset" id="but" value=" Reset ">
+        <input type="submit" id="but" value=" Submit ">
+      </form>
+    </div>
+    
+  </div>
+ 
+  <br>
+</body>
+
+{% endblock %}

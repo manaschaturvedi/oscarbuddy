@@ -1,0 +1,25 @@
+#book_image {
+	margin-top : 50px;
+	margin-left : 50px;
+	box-shadow : 5px 5px 5px black;
+	width : 300px;
+}
+#heading {
+	margin-top : -448px;
+	margin-left : 425px;
+}
+.pname {
+	font-style : italic;
+}
+#buy {
+	margin-top : 370px;
+	margin-left : 50px;
+}
+#details {
+	margin-left : 425px;
+	margin-top : -450px;
+}
+#description {
+	margin-left : 425px;
+	margin-top : 20px;
+}
